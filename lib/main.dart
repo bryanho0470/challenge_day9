@@ -10,45 +10,50 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF202020),
+        backgroundColor: const Color(0xFF202020),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Flexible(
-                flex: 1,
+                flex: 0,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          "Hey Selena",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.w800,
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.network(
+                            'https://scontent-nrt1-2.xx.fbcdn.net/v/t39.30808-6/339663103_766560368185855_3130259682673422101_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=6hhJtBI0H70AX_aLxpz&_nc_ht=scontent-nrt1-2.xx&oh=00_AfBtZRFIl3AdYu00FLgL5TtEsZ3UNWSFWXdok2RXMjceug&oe=65AAB95E',
+                            height: 50,
+                            width: 50,
                           ),
                         ),
-                        Text(
-                          "Welcome back",
-                          style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.8),
-                            fontSize: 18,
-                          ),
+                      ],
+                    ),
+                    const Column(
+                      children: [
+                        Icon(
+                          Icons.add,
+                          size: 30,
+                          color: Color(0xffffffff),
                         )
                       ],
                     ),
                   ],
                 ),
               ),
-              Flexible(
+              const SizedBox(
+                height: 20,
+              ),
+              const Flexible(
                 flex: 1,
                 child: Row(
                   children: [
@@ -62,11 +67,9 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              Flexible(
+              const Flexible(
                 flex: 1,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
                       children: [
@@ -86,7 +89,7 @@ class MyApp extends StatelessWidget {
                           "・",
                           style: TextStyle(
                             color: Color.fromARGB(255, 198, 78, 118),
-                            fontSize: 20,
+                            fontSize: 30,
                             fontWeight: FontWeight.w900,
                           ),
                         )
@@ -97,7 +100,315 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              Flexible(
+                flex: 2,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 150,
+                        width: 330,
+                        decoration: BoxDecoration(
+                          color: const Color(0xfffef655),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "11\n30\n|\n12\n20",
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                              width: 12), // Space between texts
+                                          Text(
+                                            "DESIGN\nMEETING",
+                                            style: TextStyle(
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 30),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "Alex",
+                                          style: TextStyle(
+                                              color: Color(0xffBAB432)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "HELENA",
+                                          style: TextStyle(
+                                              color: Color(0xffBAB432)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "NANA",
+                                          style: TextStyle(
+                                              color: Color(0xffBAB432)),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ]),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Flexible(
+                flex: 2,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 150,
+                        width: 330,
+                        decoration: BoxDecoration(
+                          color: const Color(0xff9C6BCE),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "12\n35\n|\n14\n00",
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                              width: 12), // Space between texts
+                                          Text(
+                                            "DAILY\nPROJECT",
+                                            style: TextStyle(
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 30),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "ME",
+                                          style: TextStyle(color: Colors.black),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "RICHARD",
+                                          style: TextStyle(
+                                              color: Color(0xff6E4991)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "CIRY",
+                                          style: TextStyle(
+                                              color: Color(0xff6E4991)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "+4",
+                                          style: TextStyle(
+                                              color: Color(0xff6E4991)),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ]),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Flexible(
+                flex: 2,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 150,
+                        width: 330,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffBBEF4C),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "15\n00\n|\n16\n30",
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                              width: 12), // Space between texts
+                                          Text(
+                                            "WEEKLY\nPLANNING",
+                                            style: TextStyle(
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 30),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "DEN",
+                                          style: TextStyle(
+                                              color: Color(0xffA3CD4A)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "NANA",
+                                          style: TextStyle(
+                                              color: Color(0xffA3CD4A)),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "MARK",
+                                          style: TextStyle(
+                                              color: Color(0xffA3CD4A)),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ]),
+              ),
             ],
           ),
         ),
